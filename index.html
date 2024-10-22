@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Meubel House_Logos-05.png" alt="Marmeto Logo" class="logo-img">
+            <span class="logo-text">Marmeto</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <a href="#" class="search-icon">
+                <img src="akar-icons_search.png" alt="Search">
+            </a>
+            <a href="#" class="favorite-icon">
+                <img src="Vector (2).png" alt="Favorites">
+            </a>
+            <a href="#" class="cart-icon">
+                <img src="ant-design_shopping-cart-outlined.png" alt="Cart">
+            </a>
+        </div>
+    </header>
+
+    <!-- Blurred Image Section -->
+    <div class="blur-section">
+        <img src="Rectangle 1.png" alt="Blurred Background" class="blur-background">
+        <div class="blur-content">
+            <img src="Meubel House_Logos-05.png" alt="Marmeto Logo" class="blur-logo">
+            <h1>Cart</h1>
+            <p class="breadcrumb">Home &gt; Cart</p>
+        </div>
+    </div>
+
+    <main>
+        <section class="cart-section">
+            <div class="cart-container">
+                <!-- Cart Table -->
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="product">
+                                <img src="Group 146.png" alt="Asgaard sofa">
+                                <span>Asgaard sofa</span>
+                            </td>
+                            <td class="price">Rs. 250,000.00</td>
+                            <td class="quantity">
+                                <input type="number" value="1" min="1" id="quantityInput">
+                            </td>
+                            <td class="subtotal" id="subtotal">Rs. 250,000.00</td>
+                            <td class="remove">
+                                <!-- <button class="remove-btn">🗑️</button> -->
+                                <img src="ant-design_delete-filled.png" alt="delete">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Cart Totals -->
+                <div class="cart-totals">
+                    <h2>Cart Totals</h2>
+                    <div class="totals-line">
+                        <span>Subtotal</span>
+                        <span id="cartSubtotal">Rs. 250,000.00</span>
+                    </div>
+                    <div class="totals-line">
+                        <span>Total</span>
+                        <span id="cartTotal" class="total-amount">Rs. 250,000.00</span>
+                    </div>
+                    <button class="checkout-btn">Check Out</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+        <div class="footer-info">
+            <div class="footer-item">
+                <img src="trophy 1.png" alt="High Quality">
+                <div class="text">
+                    <h3>High Quality</h3>
+                    <p>crafted from top materials</p>
+                </div>
+            </div>
+            <div class="footer-item">
+                <img src="Group.png" alt="Warranty Protection">
+                <div class="text">
+                    <h3>Warranty Protection</h3>
+                    <p>Over 2 years</p>
+                </div>
+            </div>
+            <div class="footer-item">
+                <img src="Vector.png" alt="Free Shipping">
+                <div class="text">
+                    <h3>Free Shipping</h3>
+                    <p>Order over $150</p>
+                </div>
+            </div>
+            <div class="footer-item">
+                <img src="Vector (1).png" alt="24/7 Support">
+                <div class="text">
+                    <h3>24/7 Support</h3>
+                    <p>Dedicated support</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px; /* Adjusted for smaller screens */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Header Icons */
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-icons a {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header-icons img {
+    width: 20px;
+}
+
+/* Blurred Image Section */
+.blur-section {
+    position: relative;
+    width: 100%;
+    height: 316px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blur-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.blur-content {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    color: #000;
+}
+
+.blur-logo {
+    width: 80px;
+    margin-bottom: 5px;
+}
+
+.blur-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.breadcrumb {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+/* Cart Section */
+.cart-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px; /* Adjust max width for larger screens */
+    margin: 40px auto;
+    gap: 20px; /* Space between table and totals */
+    flex-wrap: wrap; /* Allows items to wrap */
+}
+
+.cart-table {
+    flex: 1 1 60%; /* Allow table to take up 60% of the width */
+    border-collapse: collapse;
+    min-width: 300px; /* Minimum width for cart table */
+}
+
+.cart-table th,
+.cart-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-table th {
+    background-color: #f4eadb;
+    font-weight: bold;
+}
+
+.cart-table td.product {
+    display: flex;
+    align-items: center;
+}
+
+.cart-table img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.quantity input {
+    width: 50px;
+    padding: 5px;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Cart Totals */
+.cart-totals {
+    flex: 1 1 35%; /* Allow totals section to take 35% of the width */
+    padding: 20px;
+    background-color: #f4eadb;
+    border-radius: 5px;
+    min-width: 250px; /* Minimum width for totals section */
+}
+
+.cart-totals h2 {
+    margin-bottom: 20px;
+}
+
+.totals-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.total-amount {
+    color: #c99847;
+    font-weight: bold;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.checkout-btn:hover {
+    background-color: #f4eadb;
+}
+
+/* Footer */
+footer {
+    background-color: #f4eadb;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap; /* Allows footer items to wrap */
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    width: 23%; /* Adjusted to give space for 4 items */
+    text-align: left;
+    margin-bottom: 20px; /* Space between footer items */
+}
+
+.footer-item img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.footer-item .text h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.footer-item .text p {
+    font-size: 12px;
+    color: #555;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack header items on smaller screens */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    header .logo {
+        margin-bottom: 10px; /* Space between logo and navigation */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Stack navigation items */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    header nav ul li {
+        margin: 5px 0; /* Space between nav items */
+    }
+
+    .cart-container {
+        flex-direction: column; /* Stack cart items on smaller screens */
+        align-items: stretch; /* Align items to stretch full width */
+    }
+
+    .cart-table {
+        width: 100%; /* Full width for cart table */
+        margin-bottom: 20px; /* Add space below the table */
+    }
+
+    .cart-totals {
+        width: 100%; /* Full width for cart totals */
+        margin-top: 20px; /* Space above totals */
+    }
+
+    .footer-info {
+        flex-direction: column; /* Stack footer items */
+        align-items: center; /* Center footer items */
+    }
+
+    .footer-item {
+        width: 80%; /* Full width for footer items */
+        justify-content: center; /* Center footer item content */
+    }
+
+    .footer-item img {
+        width: 30px; /* Smaller icons on mobile */
+    }
+
+    .footer-item .text h3 {
+        font-size: 14px; /* Smaller text on mobile */
+    }
+
+    .footer-item .text p {
+        font-size: 10px; /* Smaller description on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .blur-content h1 {
+        font-size: 32px; /* Smaller title on extra small screens */
+    }
+
+    .breadcrumb {
+        font-size: 14px; /* Smaller breadcrumb on extra small screens */
+    }
+
+    .cart-totals {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .checkout-btn {
+        padding: 12px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Smaller font size for buttons */
+    }
+}
